@@ -1,0 +1,66 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion androidConfig.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion androidConfig.minSdkVersion
+        targetSdkVersion androidConfig.targetSdkVersion
+        versionCode androidConfig.versionCode
+        versionName androidConfig.versionName
+
+        //butterknife
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+
+    api rootProject.ext.support["constraint-layout"]
+    api rootProject.ext.support["appcompat-v7"]
+
+    //透明状态栏
+    api rootProject.ext.dependencies["statusbarutil"]
+
+    //滑动返回
+    api rootProject.ext.dependencies["backLayout"]
+
+    api rootProject.ext.dependencies["butterknife"]
+    //annotationProcessor  自动生成java文件  'com.jakewharton:butterknife-compiler:8.8.1'
+    api rootProject.ext.dependencies["butterknife-compiler"]
+
+    //material-dialogs
+    api rootProject.ext.dependencies["material-dialogs-core"]
+    api rootProject.ext.dependencies["material-dialogs-commons"]
+
+    //network
+    api rootProject.ext.dependencies["okhttp"]
+    api rootProject.ext.dependencies["retrofit"]
+    api rootProject.ext.dependencies["adapter-rxjava"]
+
+    //rx 6.0权限请求
+    api rootProject.ext.dependencies["rxpermissions"]
+
+    //rxjava
+    api rootProject.ext.dependencies["rxjava"]
+    api rootProject.ext.dependencies["rxandroid"]
+
+    //glide图片加载
+    api rootProject.ext.dependencies["glide"]
+    //annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
+    api rootProject.ext.dependencies["glide-compiler"]
+
+}

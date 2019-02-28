@@ -1,0 +1,49 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ExtraTranslation">
+    <string name="app_name">ToolBase</string>
+
+    <string name="str_digits">0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+
+    <string name="Commons.SslWarning">安全警告</string>
+    <string name="Commons.SslWarningsHeader">网站的安全证书存在问题</string>
+    <string name="Commons.SslUntrusted">网站证书没有可信任的发行者</string>
+    <string name="Commons.SslIDMismatch">站点名和证书不匹配</string>
+    <string name="Commons.SslExpired">证书已经过期</string>
+    <string name="Commons.SslNotYetValid">证书没有验证</string>
+    <string name="Main.VndErrorTitle">不能打开网址</string>
+    <string name="Main.VndErrorMessage">本程序不支持这个网址: %s.</string>
+
+    <string name="HttpAuthenticationDialog.DialogTitle">Sign in to %1$s - %2$s</string>
+    <string name="HttpAuthenticationDialog.UserName">用户名</string>
+    <string name="HttpAuthenticationDialog.Password">密码</string>
+    <string name="Commons.Continue">继续</string>
+    <string name="Commons.Proceed">确定</string>
+    <string name="Commons.Cancel">取消</string>
+    <string name="Commons.JavaScriptDialog">JavaScript对话框</string>
+    <string name="Main.FileChooserPrompt">选择文件上传</string>
+    <string name="ab_all_video">全部视频</string>
+    <string name="ab_all_img">全部图片</string>
+    <string name="back">返回</string>
+    <string name="confirm_account">账户确认</string>
+    <string name="file_not_exist">文件不存在</string>
+
+
+    <string name="title_camera_permission">开启相机权限</string>
+    <string name="check_camera_video_message">相机权限已被禁止。现在设置？</string>
+    <string name="title_record_audio_permission">开启录音权限</string>
+    <string name="message_record_audio_permission">录音权限已被禁止，请在系统设置中开启。现在设置？</string>
+    <string name="title_floating_window_permission">开启悬浮窗权限</string>
+    <string name="message_floating_window_permission">悬浮框已被禁止，请在系统设置中开启。现在设置？</string>
+    <string name="title_sdcard_permission">开启读写手机存储权限</string>
+    <string name="message_sdcard_permission">读写手机存储已被禁止，请在系统设置中开启。现在设置？</string>
+    <string name="title_location_permission">开启定位权限</string>
+    <string name="message_location_permission">定位已被禁止，请在系统设置中开启。现在设置？</string>
+    <string name="title_phone_permission">开启手机权限</string>
+    <string name="message_phone_permission">读取手机状态已被禁止，请在系统设置中开启。现在设置？</string>
+
+    <string name="permission_denied">手机权限被禁止</string>
+    <string name="permission_denied_content">手机相关权限被禁止，现在去设置？</string>
+
+    <string name="settings">设置</string>
+    <string name="str_sure">确定</string>
+    <string name="cancel">取消</string>
+</resources>

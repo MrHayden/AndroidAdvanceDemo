@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="WgScalemageView">
+        <attr name="wgScale" format="float" />
+
+    </declare-styleable>
+    <declare-styleable name="WgShapeImageView">
+        <attr name="wgBorderWidth" format="dimension" />
+        <attr name="wgBorderColor" format="color" />
+        <attr name="wgRadius" format="dimension" />
+        <attr name="wgPressedAlpha" format="float" />
+        <attr name="wgPressedColor" format="color" />
+        <attr name="wgPlaceHolder" format="reference" />
+        <attr name="wgErrorImg" format="reference" />
+        <attr name="wgShapeType" format="enum">
+            <enum name="rectangle" value="0" />
+            <enum name="circle" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>

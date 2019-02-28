@@ -1,0 +1,82 @@
+ext {
+
+    //true:组件模式，false：集成模式
+    isModule = true
+
+    androidConfig = [
+            "compileSdkVersion": 28,
+            "minSdkVersion"    : 19,
+            "targetSdkVersion" : 28,
+            "versionCode"      : 1,
+            "versionName"      : "1.0"
+    ]
+    //包名
+    appId = [
+            "app": "xxm.advancedemo"
+    ]
+
+    //version配置
+    versions = [
+            "support-version"  : "28.0.0",
+            "constraint-layout": "1.1.3",
+            "junit-version"    : "4.12",
+    ]
+    //support配置
+    support = [
+            'support-v4'              : "com.android.support:support-v4:${versions["support-version"]}",
+            'appcompat-v7'            : "com.android.support:appcompat-v7:${versions["support-version"]}",
+            "constraint-layout"       : "com.android.support.constraint:constraint-layout:${versions["constraint-layout"]}",
+            'recyclerview-v7'         : "com.android.support:recyclerview-v7:${versions["support-version"]}",
+            'support-v13'             : "com.android.support:support-v13:${versions["support-version"]}",
+            'support-fragment'        : "com.android.support:support-fragment:${versions["support-version"]}",
+            'design'                  : "com.android.support:design:${versions["support-version"]}",
+            'animated-vector-drawable': "com.android.support:animated-vector-drawable:${versions["support-version"]}",
+            'junit'                   : "junit:junit:${versions["junit-version"]}",
+    ]
+    //依赖第三方配置
+    dependencies = [
+            //下拉刷新,上拉加载
+            "tkrefreshlayout":"com.lcodecorex:tkrefreshlayout:1.0.7",
+            //底部tabBar
+            "bottom-tabbar":"me.majiajie:pager-bottom-tab-strip:2.2.5",
+            //透明状态栏  https://github.com/laobie/StatusBarUtil
+            "statusbarutil":"com.jaeger.statusbarutil:library:1.5.1",
+            //布局注解框架
+            "butterknife":"com.jakewharton:butterknife:8.8.1",
+            "butterknife-compiler":"com.jakewharton:butterknife-compiler:8.8.1",
+            //rxjava
+            "rxjava"                               : "io.reactivex.rxjava2:rxjava:2.1.12",
+            "rxandroid"                            : "io.reactivex.rxjava2:rxandroid:2.0.2",
+            //rx系列与View生命周期同步
+            "rxlifecycle"                          : "com.trello.rxlifecycle2:rxlifecycle:2.2.1",
+            "rxlifecycle-components"               : "com.trello.rxlifecycle2:rxlifecycle-components:2.2.1",
+            //rxbinding
+            "rxbinding"                            : "com.jakewharton.rxbinding2:rxbinding:2.1.1",
+            //rx 6.0权限请求
+            "rxpermissions"                        : "com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar",
+            //network
+            "okhttp"                               : "com.squareup.okhttp3:okhttp:3.10.0",
+            "retrofit"                             : "com.squareup.retrofit2:retrofit:2.4.0",
+            "converter-gson"                       : "com.squareup.retrofit2:converter-gson:2.4.0",
+            "adapter-rxjava"                       : "com.squareup.retrofit2:adapter-rxjava2:2.4.0",
+            //glide图片加载
+            "glide"                                : "com.github.bumptech.glide:glide:4.6.1",
+            "glide-compiler"                       : "com.github.bumptech.glide:compiler:4.6.1",
+            //json解析
+            "gson"                                 : "com.google.code.gson:gson:2.8.2",
+            //material-dialogs
+            "material-dialogs-core"                : "com.afollestad.material-dialogs:core:0.9.6.0",
+            "material-dialogs-commons"             : "com.afollestad.material-dialogs:commons:0.9.6.0",
+            //recyclerview的databinding套装
+            "bindingcollectionadapter"             : "me.tatarka.bindingcollectionadapter2:bindingcollectionadapter:2.2.0",
+            "bindingcollectionadapter-recyclerview": "me.tatarka.bindingcollectionadapter2:bindingcollectionadapter-recyclerview:2.2.0",
+            //Google AAC
+            "lifecycle-extensions"                 : "android.arch.lifecycle:extensions:1.1.1",
+            "lifecycle-compiler"                   : "android.arch.lifecycle:compiler:1.1.1",
+            //左滑返回activity    https://github.com/bingoogolapple/BGASwipeBackLayout-Android
+            "backLayout"                           : "cn.bingoogolapple:bga-swipebacklayout:1.1.9@aar",
+            //内存泄漏测试
+            "leakcanary-android"                   : "com.squareup.leakcanary:leakcanary-android:1.6.2",
+            "leakcanary-support-fragment"          : "com.squareup.leakcanary:leakcanary-support-fragment:1.6.2"
+    ]
+}
