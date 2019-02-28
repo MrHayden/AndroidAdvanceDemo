@@ -1,1 +1,1 @@
-include ':app', ':ToolBase'
+include ':app', ':ToolBase', ':DemoLiveDataBus', ':DemoVitamio', ':ToolVitamio', ':DemoCustomView', ':DemoARouter'

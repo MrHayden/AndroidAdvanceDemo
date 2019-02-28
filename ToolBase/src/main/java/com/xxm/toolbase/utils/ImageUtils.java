@@ -941,7 +941,7 @@ public class ImageUtils {
         canvas.drawBitmap(watermark,
                 (src.getWidth() - watermark.getWidth()) / 2,
                 (src.getHeight() - watermark.getHeight()) / 2, null); // 涂鸦图片画到原图片中间位置
-        canvas.save(Canvas.ALL_SAVE_FLAG);
+        canvas.save();// API 27以下需要传入参数Canvas.ALL_SAVE_FLAG
         canvas.restore();
         watermark.recycle();
         watermark = null;
@@ -961,7 +961,7 @@ public class ImageUtils {
         Paint paint = new Paint();
         paint.setColor(Color.RED);
         canvas.drawText(msg, x, y, paint);
-        canvas.save(Canvas.ALL_SAVE_FLAG);
+        canvas.save();//Canvas.ALL_SAVE_FLAG
         canvas.restore();
         return src;
     }

@@ -29,8 +29,8 @@ android {
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
 
-    api rootProject.ext.support["constraint-layout"]
     api rootProject.ext.support["appcompat-v7"]
+    api rootProject.ext.support["constraint-layout"]
 
     //透明状态栏
     api rootProject.ext.dependencies["statusbarutil"]
@@ -49,6 +49,7 @@ dependencies {
     //network
     api rootProject.ext.dependencies["okhttp"]
     api rootProject.ext.dependencies["retrofit"]
+    api rootProject.ext.dependencies["converter-gson"]
     api rootProject.ext.dependencies["adapter-rxjava"]
 
     //rx 6.0权限请求

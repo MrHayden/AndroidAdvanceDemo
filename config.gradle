@@ -12,7 +12,11 @@ ext {
     ]
     //包名
     appId = [
-            "app": "xxm.advancedemo"
+            "app"            : "xxm.advancedemo",
+            "demolivedatabus": "xxm.livedatabusdemo",
+            "democustomview" : "xxm.democustomview",
+            "demovitamio"    : "xxm.demovitamio",
+            "demoarouter"    : "xxm.demoarouter"
     ]
 
     //version配置
@@ -36,14 +40,14 @@ ext {
     //依赖第三方配置
     dependencies = [
             //下拉刷新,上拉加载
-            "tkrefreshlayout":"com.lcodecorex:tkrefreshlayout:1.0.7",
+            "tkrefreshlayout"                      : "com.lcodecorex:tkrefreshlayout:1.0.7",
             //底部tabBar
-            "bottom-tabbar":"me.majiajie:pager-bottom-tab-strip:2.2.5",
+            "bottom-tabbar"                        : "me.majiajie:pager-bottom-tab-strip:2.2.5",
             //透明状态栏  https://github.com/laobie/StatusBarUtil
-            "statusbarutil":"com.jaeger.statusbarutil:library:1.5.1",
+            "statusbarutil"                        : "com.jaeger.statusbarutil:library:1.5.1",
             //布局注解框架
-            "butterknife":"com.jakewharton:butterknife:8.8.1",
-            "butterknife-compiler":"com.jakewharton:butterknife-compiler:8.8.1",
+            "butterknife"                          : "com.jakewharton:butterknife:8.8.1",
+            "butterknife-compiler"                 : "com.jakewharton:butterknife-compiler:8.8.1",
             //rxjava
             "rxjava"                               : "io.reactivex.rxjava2:rxjava:2.1.12",
             "rxandroid"                            : "io.reactivex.rxjava2:rxandroid:2.0.2",
