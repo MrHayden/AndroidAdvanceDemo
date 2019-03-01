@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         activity = this;
 
     }
+
     public static Activity getThis() {
         return activity;
     }
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onInterrupt(Postcard postcard) {
                 super.onInterrupt(postcard);
-                Toast.makeText(MainActivity.this,"被拦截了",Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "被拦截了", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -68,5 +69,11 @@ public class MainActivity extends AppCompatActivity {
         ARouter.getInstance().navigation(SingleProvider.class).saySingleHello("单例老王");
     }
 
+    //通过url跳转
+    public void onGoWebAct(View view) {
+        ARouter.getInstance().build(Constance.PATH_WEB_ACT)
+                .withString("url", "file:///android_asset/schame-test.html")
+                .navigation();
+    }
 
 }

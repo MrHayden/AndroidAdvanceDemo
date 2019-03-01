@@ -42,4 +42,10 @@
         android:layout_height="wrap_content"
         android:text="调用单类" />
 
+    <Button
+        android:onClick="onGoWebAct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="通过url跳转" />
+
 </LinearLayout>

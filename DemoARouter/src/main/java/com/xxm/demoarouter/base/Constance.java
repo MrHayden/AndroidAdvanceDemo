@@ -7,6 +7,7 @@ public final class Constance {
     //类的跳转
     public static final String PATH_TEST1 = "/test/activity1";
     public static final String PATH_TEST2 = "/test/activity2";
+    public static final String PATH_WEB_ACT = "/test/web_act";
 
     //对象自动实例化
     public static final String PATH_SERVICE_JSON = "/myservice/testjson";
