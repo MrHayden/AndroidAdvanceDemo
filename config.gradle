@@ -12,11 +12,11 @@ ext {
     ]
     //包名
     appId = [
-            "app"            : "xxm.advancedemo",
-            "demolivedatabus": "xxm.livedatabusdemo",
-            "democustomview" : "xxm.democustomview",
-            "demovitamio"    : "xxm.demovitamio",
-            "demoarouter"    : "xxm.demoarouter"
+            "app"            : "com.xxm.advancedemo",
+            "demolivedatabus": "com.xxm.livedatabusdemo",
+            "democustomview" : "com.xxm.democustomview",
+            "demovitamio"    : "com.xxm.demovitamio",
+            "demoarouter"    : "com.xxm.demoarouter"
     ]
 
     //version配置

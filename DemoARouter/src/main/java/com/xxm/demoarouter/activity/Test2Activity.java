@@ -9,7 +9,9 @@ import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.xxm.demoarouter.R;
+import com.xxm.demoarouter.base.BeanTest;
 import com.xxm.demoarouter.base.Constance;
+import com.xxm.demoarouter.bean.BeanUser;
 
 /**
  * Created by Administrator on 2019/2/28 0028
@@ -23,12 +25,18 @@ public class Test2Activity extends AppCompatActivity {
     @Autowired
     int age;
 
+    @Autowired
+    BeanTest beanTest;
+
+    @Autowired
+    BeanUser beanUser;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.a_test2);
-
         ARouter.getInstance().inject(this);
-        ((TextView) findViewById(R.id.textview1)).setText("收到的数据name：" + name + "   age:" + age + "岁");
+
+        ((TextView) findViewById(R.id.textview1)).setText("收到的数据name：" + name + "   age:" + age + "岁" + "--" + beanUser.toString() + "--" + beanTest);
     }
 }

@@ -8,22 +8,38 @@
     tools:context=".activity.MainActivity">
 
     <Button
-        android:id="@+id/button_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="直接跳转activity"
+        android:text="跳转activity并拦截"
+        android:onClick="onGoActivity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <Button
-        android:id="@+id/button_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="携带参数跳转activity"
+        android:onClick="onParametersGoActivity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="调用服务"
+        android:onClick="onByProvide"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:onClick="onCallSingle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="调用单类" />
 
 </LinearLayout>
