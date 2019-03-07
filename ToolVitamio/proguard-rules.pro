@@ -20,10 +20,10 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
--keep public class com.xxm.toolvitamio.MediaPlayer { *; }
--keep public class com.xxm.toolvitamio.IMediaScannerService { *; }
--keep public class com.xxm.toolvitamio.MediaScanner { *; }
--keep public class com.xxm.toolvitamio.MediaScannerClient { *; }
--keep public class com.xxm.toolvitamio.VitamioLicense { *; }
--keep public class com.xxm.toolvitamio.Vitamio { *; }
--keep public class com.xxm.toolvitamio.MediaMetadataRetriever { *; }
+-keep public class io.vov.vitamio.MediaPlayer { *; }
+-keep public class io.vov.vitamio.IMediaScannerService { *; }
+-keep public class io.vov.vitamio.MediaScanner { *; }
+-keep public class io.vov.vitamio.MediaScannerClient { *; }
+-keep public class io.vov.vitamio.VitamioLicense { *; }
+-keep public class io.vov.vitamio.Vitamio { *; }
+-keep public class io.vov.vitamio.MediaMetadataRetriever { *; }

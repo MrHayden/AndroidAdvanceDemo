@@ -2,7 +2,7 @@ package com.xxm.demovvitamio;
 
 import android.app.Application;
 
-import com.xxm.toolvitamio.Vitamio;
+import io.vov.vitamio.Vitamio;
 
 /**
  * Created by Administrator on 2019/2/25 0025

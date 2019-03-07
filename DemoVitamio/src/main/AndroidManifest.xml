@@ -19,7 +19,7 @@
         </activity>
 
         <activity
-            android:name="com.xxm.toolvitamio.activity.InitActivity"
+            android:name="io.vov.vitamio.activity.InitActivity"
             android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden"
             android:launchMode="singleTop"
             android:theme="@android:style/Theme.NoTitleBar"

@@ -3,9 +3,9 @@ package com.xxm.demovvitamio;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.xxm.toolvitamio.MediaPlayer;
-import com.xxm.toolvitamio.widget.MediaController;
-import com.xxm.toolvitamio.widget.VideoView;
+import io.vov.vitamio.MediaPlayer;
+import io.vov.vitamio.widget.MediaController;
+import io.vov.vitamio.widget.VideoView;
 
 public class MainActivity extends AppCompatActivity {
 
