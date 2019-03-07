@@ -1,5 +1,6 @@
 package com.xxm.demovvitamio;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
@@ -26,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData() {
+//        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/raw/" + R.raw.test_cbr);
+//        videoView.setVideoURI(uri);
         videoView.setVideoPath("http://gslb.miaopai.com/stream/3D~8BM-7CZqjZscVBEYr5g__.mp4");//设置播放地址
         videoView.setMediaController(new MediaController(this));//绑定控制器
         videoView.setVideoQuality(MediaPlayer.VIDEOQUALITY_HIGH);//设置播放画质 高画质
