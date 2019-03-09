@@ -1,5 +1,5 @@
 
-    testModel说明文件
+    simpleTestModel说明文件
 
     pattern：设计模式模块，共有23种(只包含常用的基本设计模式):
             六大原则：
