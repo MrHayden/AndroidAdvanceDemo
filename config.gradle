@@ -16,7 +16,8 @@ ext {
             "demolivedatabus": "com.xxm.livedatabusdemo",
             "democustomview" : "com.xxm.democustomview",
             "demovitamio"    : "com.xxm.demovitamio",
-            "demoarouter"    : "com.xxm.demoarouter"
+            "demoarouter"    : "com.xxm.demoarouter",
+            "testmodel"      : "com.xxm.testmodel"
     ]
 
     //version配置
@@ -83,6 +84,6 @@ ext {
             "leakcanary-android"                   : "com.squareup.leakcanary:leakcanary-android:1.6.2",
             "leakcanary-support-fragment"          : "com.squareup.leakcanary:leakcanary-support-fragment:1.6.2",
             //json转Object,object转json
-            "fastjson" : "com.alibaba:fastjson:1.2.48"
+            "fastjson"                             : "com.alibaba:fastjson:1.2.48"
     ]
 }

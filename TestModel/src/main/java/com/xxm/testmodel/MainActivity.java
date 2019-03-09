@@ -4,6 +4,10 @@ import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 
+import com.xxm.testmodel.decorator.DecoratorRoom;
+import com.xxm.testmodel.decorator.NewRoom;
+import com.xxm.testmodel.decorator.RoomAddBed;
+import com.xxm.testmodel.decorator.RoomAddKitchen;
 import com.xxm.testmodel.pattern.builder.BuilderTest;
 import com.xxm.testmodel.pattern.factory.FactoryTest1;
 import com.xxm.testmodel.pattern.factory.IFactory;
@@ -42,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
     public static void main(String[] arg) {
 //        singlePattern();
 //        builderPattern();
-        factoryPattern();
+//        factoryPattern();
+        decoratorPattern();
     }
 
     /**
@@ -94,5 +99,17 @@ public class MainActivity extends AppCompatActivity {
         iAllFactory.createFactory().onPubMethod("生产戴尔主机");
         iAllFactory.createFactory2().onPubMethod2("生产戴尔显示器");
 
+    }
+
+    /**
+     * 装饰者模式
+     */
+    private static void decoratorPattern() {
+        DecoratorRoom decoratorRoom;
+        decoratorRoom = new RoomAddKitchen(new NewRoom());
+        decoratorRoom.fitment();
+
+        decoratorRoom = new RoomAddBed(new NewRoom());
+        decoratorRoom.fitment();
     }
 }
