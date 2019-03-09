@@ -4,8 +4,10 @@
 android进阶技术demo
 
 #### 软件架构
-软件架构说明
 
+ToolBase：包含base类，rxbus,livedatabus,retrofit,glide,permission，图片处理等的封装。
+
+ToolVitamio： vitamio视频播放器
 
 #### 安装教程
 

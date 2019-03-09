@@ -1,4 +1,4 @@
-package com.xxm.advancedemo.proxy;
+package com.xxm.testmodel.proxy;
 
 import java.lang.reflect.Proxy;
 

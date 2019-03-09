@@ -1,4 +1,4 @@
-package com.xxm.advancedemo.reflect;
+package com.xxm.testmodel.reflect;
 
 /**
  * Created by Administrator on 2019/2/27 0027

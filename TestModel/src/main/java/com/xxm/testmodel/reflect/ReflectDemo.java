@@ -1,4 +1,4 @@
-package com.xxm.advancedemo.reflect;
+package com.xxm.testmodel.reflect;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;

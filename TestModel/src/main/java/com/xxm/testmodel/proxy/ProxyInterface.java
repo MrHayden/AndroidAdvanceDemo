@@ -1,4 +1,4 @@
-package com.xxm.advancedemo.proxy;
+package com.xxm.testmodel.proxy;
 
 /**
  * Created by Administrator on 2019/2/27 0027
