@@ -4,7 +4,7 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 /**
- * Created by Administrator on 2019/2/27 0027
+ * Created by xxm on 2019/2/27 0027
  */
 public class ProxyInvocationHandler<T> implements InvocationHandler {
 

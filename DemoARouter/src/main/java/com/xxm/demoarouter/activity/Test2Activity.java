@@ -14,7 +14,7 @@ import com.xxm.demoarouter.base.Constance;
 import com.xxm.demoarouter.bean.BeanUser;
 
 /**
- * Created by Administrator on 2019/2/28 0028
+ * Created by xxm on 2019/2/28 0028
  */
 @Route(path = Constance.PATH_TEST2)
 public class Test2Activity extends AppCompatActivity {

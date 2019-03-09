@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by Administrator on 2019/2/27 0027
+ * Created by xxm on 2019/2/27 0027
  * livedata hook源码,解决未创建订阅者也能监听到数据的问题
  */
 public class LiveDataBus {

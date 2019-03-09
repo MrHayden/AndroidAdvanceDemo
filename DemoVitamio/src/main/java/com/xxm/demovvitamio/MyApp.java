@@ -5,7 +5,7 @@ import android.app.Application;
 import io.vov.vitamio.Vitamio;
 
 /**
- * Created by Administrator on 2019/2/25 0025
+ * Created by xxm on 2019/2/25 0025
  */
 public class MyApp extends Application {
 

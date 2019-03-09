@@ -19,7 +19,7 @@ import retrofit2.http.Streaming;
 import retrofit2.http.Url;
 
 /**
- * Created by goldze on 2017/5/11.
+ * Created by xxm on 2017/5/11.
  * 文件下载管理，封装一行代码实现下载
  */
 

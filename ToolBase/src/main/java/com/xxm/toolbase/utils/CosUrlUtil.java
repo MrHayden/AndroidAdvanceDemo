@@ -1,7 +1,7 @@
 package com.xxm.toolbase.utils;
 
 /**
- * Created by Administrator on 2019/1/8 0008
+ * Created by xxm on 2019/1/8 0008
  */
 public class CosUrlUtil {
 

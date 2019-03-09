@@ -1,7 +1,7 @@
 package com.xxm.testmodel.proxy;
 
 /**
- * Created by Administrator on 2019/2/27 0027
+ * Created by xxm on 2019/2/27 0027
  * 被代理类
  */
 public class ProxyClass implements ProxyInterface {

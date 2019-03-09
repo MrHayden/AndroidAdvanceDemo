@@ -1,7 +1,7 @@
 package com.xxm.demoarouter.base;
 
 /**
- * Created by Administrator on 2019/2/28 0028
+ * Created by xxm on 2019/2/28 0028
  */
 public final class Constance {
     //类的跳转

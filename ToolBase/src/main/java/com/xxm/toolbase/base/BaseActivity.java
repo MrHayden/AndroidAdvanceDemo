@@ -21,7 +21,7 @@ import butterknife.ButterKnife;
 import cn.bingoogolapple.swipebacklayout.BGASwipeBackHelper;
 
 /**
- * Created by Administrator on 2018/11/29 0029
+ * Created by xxm on 2018/11/29 0029
  */
 public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener, BGASwipeBackHelper.Delegate, Observer<LiveDataBusBean> {
 

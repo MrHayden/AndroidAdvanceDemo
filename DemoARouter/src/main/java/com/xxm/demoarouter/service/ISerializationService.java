@@ -10,7 +10,7 @@ import com.xxm.demoarouter.base.Constance;
 import java.lang.reflect.Type;
 
 /**
- * Created by Administrator on 2019/3/1 0001
+ * Created by xxm on 2019/3/1 0001
  * 如果需要传递自定义对象，新建一个类（并非自定义对象类），然后实现 SerializationService,并使用@Route注解标注(方便用户自行选择序列化方式)，例如：BeanTest类
  */
 @Route(path = Constance.PATH_SERVICE_JSON)

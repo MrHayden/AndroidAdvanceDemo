@@ -3,7 +3,7 @@ package com.xxm.toolbase.base;
 import android.os.Environment;
 
 /**
- * Created by Administrator on 2018/11/29 0029
+ * Created by xxm on 2018/11/29 0029
  */
 public class BaseConstants {
 

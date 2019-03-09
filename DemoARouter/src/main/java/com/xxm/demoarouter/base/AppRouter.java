@@ -6,7 +6,7 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import com.xxm.demoarouter.BuildConfig;
 
 /**
- * Created by Administrator on 2019/2/28 0028
+ * Created by xxm on 2019/2/28 0028
  */
 public class AppRouter extends Application {
 

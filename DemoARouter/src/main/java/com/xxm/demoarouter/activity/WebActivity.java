@@ -12,7 +12,7 @@ import com.xxm.demoarouter.R;
 import com.xxm.demoarouter.base.Constance;
 
 /**
- * Created by Administrator on 2019/3/1 0001
+ * Created by xxm on 2019/3/1 0001
  */
 @Route(path = Constance.PATH_WEB_ACT)
 public class WebActivity extends AppCompatActivity {

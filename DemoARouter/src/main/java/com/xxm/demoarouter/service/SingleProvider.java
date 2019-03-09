@@ -9,7 +9,7 @@ import com.xxm.demoarouter.base.Constance;
 
 /**
  * 测试单类注入
- * Created by Administrator on 2019/3/1 0001
+ * Created by xxm on 2019/3/1 0001
  */
 @Route(path = Constance.PATH_PROVIDER_SERVICE)
 public class SingleProvider implements IProvider {

@@ -7,7 +7,7 @@ import com.xxm.toolbase.utils.Utils;
 import cn.bingoogolapple.swipebacklayout.BGASwipeBackHelper;
 
 /**
- * Created by Administrator on 2019/2/26 0026
+ * Created by xxm on 2019/2/26 0026
  */
 public class MyApp extends Application {
 

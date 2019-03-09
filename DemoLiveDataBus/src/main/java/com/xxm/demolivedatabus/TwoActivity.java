@@ -14,7 +14,7 @@ import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
- * Created by Administrator on 2019/2/26 0026
+ * Created by xxm on 2019/2/26 0026
  */
 public class TwoActivity extends BaseActivity {
 

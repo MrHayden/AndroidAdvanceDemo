@@ -8,7 +8,7 @@ import com.xxm.toolbase.entity.LiveDataBusBean;
 import com.xxm.toolbase.utils.AppManager;
 
 /**
- * Created by Administrator on 2019/2/28 0028
+ * Created by xxm on 2019/2/28 0028
  * livedatdbus事情发送和接收方法工具类
  */
 public class LiveDataBusUtil {

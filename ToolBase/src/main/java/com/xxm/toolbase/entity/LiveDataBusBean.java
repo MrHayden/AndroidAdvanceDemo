@@ -1,7 +1,7 @@
 package com.xxm.toolbase.entity;
 
 /**
- * Created by Administrator on 2019/1/10 0010
+ * Created by xxm on 2019/1/10 0010
  */
 public class LiveDataBusBean {
 

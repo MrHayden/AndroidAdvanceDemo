@@ -8,7 +8,7 @@ import android.graphics.Paint;
 import java.util.Random;
 
 /**
- * Created by Administrator on 2019/1/18 0018
+ * Created by xxm on 2019/1/18 0018
  * 随机4位生成图形验证码
  */
 public class CreateCodeUtil {

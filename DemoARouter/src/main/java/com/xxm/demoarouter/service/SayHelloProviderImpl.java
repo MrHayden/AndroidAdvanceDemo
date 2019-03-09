@@ -7,7 +7,7 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.xxm.demoarouter.base.Constance;
 
 /**
- * Created by Administrator on 2019/3/1 0001
+ * Created by xxm on 2019/3/1 0001
  */
 @Route(path = Constance.PATH_PROVIDER_SAY_HELLO)
 public class SayHelloProviderImpl implements SayHelloProvider {

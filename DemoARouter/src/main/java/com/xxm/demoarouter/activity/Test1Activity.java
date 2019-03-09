@@ -13,7 +13,7 @@ import com.xxm.demoarouter.R;
 import com.xxm.demoarouter.base.Constance;
 
 /**
- * Created by Administrator on 2019/2/28 0028
+ * Created by xxm on 2019/2/28 0028
  */
 @Route(path = Constance.PATH_TEST1)
 public class Test1Activity extends AppCompatActivity {

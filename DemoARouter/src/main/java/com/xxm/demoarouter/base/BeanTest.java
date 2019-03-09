@@ -1,7 +1,7 @@
 package com.xxm.demoarouter.base;
 
 /**
- * Created by Administrator on 2019/3/1 0001
+ * Created by xxm on 2019/3/1 0001
  */
 public class BeanTest {
 

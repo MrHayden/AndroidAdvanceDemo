@@ -7,7 +7,7 @@ import android.content.Context;
 import java.util.Stack;
 
 /**
- * Created by Administrator on 2019/1/11 0011
+ * Created by xxm on 2019/1/11 0011
  */
 public class AppManager {
     private static Stack<Activity> activityStack = new Stack<Activity>();

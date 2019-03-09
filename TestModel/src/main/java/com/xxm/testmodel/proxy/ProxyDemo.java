@@ -3,7 +3,7 @@ package com.xxm.testmodel.proxy;
 import java.lang.reflect.Proxy;
 
 /**
- * Created by Administrator on 2019/2/27 0027
+ * Created by xxm on 2019/2/27 0027
  * <p>
  * 代理模式
  */
