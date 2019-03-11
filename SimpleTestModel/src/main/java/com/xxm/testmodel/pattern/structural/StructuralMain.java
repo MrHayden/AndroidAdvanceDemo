@@ -17,6 +17,7 @@ public class StructuralMain {
 
     /**
      * 装饰者模式
+     * 源码：context类等
      */
     private static void decoratorPattern() {
         DecoratorRoom decoratorRoom;

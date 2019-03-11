@@ -78,6 +78,8 @@ public class CreationalMain {
 
     /**
      * 原型模式
+     *
+     * 源码：Intent的使用
      */
     private static void prototypePattern() {
         //浅拷贝(PersonInfo对象不实现cloneable,克隆对象修改perisoninfo对象的值时，原对象（Person）内容也跟着改变)
