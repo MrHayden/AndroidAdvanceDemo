@@ -4,11 +4,11 @@ import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 
-import com.xxm.testmodel.decorator.DecoratorRoom;
-import com.xxm.testmodel.decorator.NewRoom;
-import com.xxm.testmodel.decorator.RoomAddBed;
-import com.xxm.testmodel.decorator.RoomAddKitchen;
 import com.xxm.testmodel.pattern.builder.BuilderTest;
+import com.xxm.testmodel.pattern.decorator.DecoratorRoom;
+import com.xxm.testmodel.pattern.decorator.NewRoom;
+import com.xxm.testmodel.pattern.decorator.RoomAddBed;
+import com.xxm.testmodel.pattern.decorator.RoomAddKitchen;
 import com.xxm.testmodel.pattern.factory.FactoryTest1;
 import com.xxm.testmodel.pattern.factory.IFactory;
 import com.xxm.testmodel.pattern.factory.factory1.Method1Factory;
@@ -17,6 +17,8 @@ import com.xxm.testmodel.pattern.factory.factory3.IAllFactory;
 import com.xxm.testmodel.pattern.factory.factory3.MethodAllFactory1;
 import com.xxm.testmodel.pattern.factory.factory3.MethodAllFactory2;
 import com.xxm.testmodel.pattern.single.ISingleTest;
+import com.xxm.testmodel.pattern.template.PostA;
+import com.xxm.testmodel.pattern.template.PostB;
 
 import java.lang.reflect.Constructor;
 
@@ -47,7 +49,8 @@ public class MainActivity extends AppCompatActivity {
 //        singlePattern();
 //        builderPattern();
 //        factoryPattern();
-        decoratorPattern();
+//        decoratorPattern();
+        templatePattern();
     }
 
     /**
@@ -109,7 +112,25 @@ public class MainActivity extends AppCompatActivity {
         decoratorRoom = new RoomAddKitchen(new NewRoom());
         decoratorRoom.fitment();
 
+        System.out.println("\n");
+
         decoratorRoom = new RoomAddBed(new NewRoom());
         decoratorRoom.fitment();
+    }
+
+    /**
+     * 模板方法模式
+     */
+    private static void templatePattern() {
+
+        //收件人A的流程
+        PostA postA = new PostA();
+        postA.post();
+
+        System.out.println("\n");
+
+        //收件人B的流程
+        PostB postB = new PostB();
+        postB.post();
     }
 }

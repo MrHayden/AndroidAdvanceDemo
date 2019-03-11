@@ -1,4 +1,4 @@
-package com.xxm.testmodel.decorator;
+package com.xxm.testmodel.pattern.decorator;
 
 /**
  * Created by xxm on 2019/3/9 0009
