@@ -1,7 +1,7 @@
 ext {
 
     //true:组件模式，false：集成模式
-    isModule = true
+    isModule = false
 
     androidConfig = [
             "compileSdkVersion": 28,
@@ -17,7 +17,8 @@ ext {
             "democustomview" : "com.xxm.democustomview",
             "demovitamio"    : "com.xxm.demovitamio",
             "demoarouter"    : "com.xxm.demoarouter",
-            "testmodel"      : "com.xxm.testmodel"
+            "testmodel"      : "com.xxm.testmodel",
+            "demoannotations": "com.xxm.demoannotations"
     ]
 
     //version配置
@@ -37,6 +38,7 @@ ext {
             'design'                  : "com.android.support:design:${versions["support-version"]}",
             'animated-vector-drawable': "com.android.support:animated-vector-drawable:${versions["support-version"]}",
             'junit'                   : "junit:junit:${versions["junit-version"]}",
+            'support-annotations':"com.android.support:support-annotations:${versions["support-version"]}"
     ]
     //依赖第三方配置
     dependencies = [

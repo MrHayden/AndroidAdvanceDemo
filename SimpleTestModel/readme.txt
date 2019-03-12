@@ -59,6 +59,12 @@
 
           4.responsibility：责任链模式：
 
+          5.观察者模式：rxjava、adapter的notifychange方法，rxandroid等；
+
+          6.迭代器模式：list、map等的数据遍历；
+
+           7.备忘录模式：activity中onSaveInstanceState的方法、Canvas中的Save（）和Restore（）等；
+
                                              3. 结构型模式(structural)：
 
         1.decorator:装饰者模式；  源码可以参考Context类等

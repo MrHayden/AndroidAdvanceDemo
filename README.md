@@ -7,7 +7,9 @@ android进阶技术demo
 
 ToolBase：包含base类，rxbus,livedatabus,retrofit,glide,permission，图片处理等的封装。
 
-ToolVitamio： vitamio视频播放器
+ToolVitamio： vitamio视频播放器；
+
+DemoAnnotations：自定义注解和动态代理，实现类似butterknife功能；
 
 #### 安装教程
 
