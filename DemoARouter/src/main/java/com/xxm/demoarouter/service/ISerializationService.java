@@ -4,7 +4,7 @@ import android.content.Context;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.facade.service.SerializationService;
-import com.alibaba.fastjson.JSON;
+import com.blankj.utilcode.util.GsonUtils;
 import com.xxm.demoarouter.base.Constance;
 
 import java.lang.reflect.Type;
@@ -18,17 +18,17 @@ public class ISerializationService implements SerializationService {
 
     @Override
     public <T> T json2Object(String text, Class<T> clazz) {
-        return JSON.parseObject(text, clazz);
+        return GsonUtils.fromJson(text, clazz);
     }
 
     @Override
     public String object2Json(Object instance) {
-        return JSON.toJSONString(instance);
+        return GsonUtils.toJson(instance);
     }
 
     @Override
     public <T> T parseObject(String input, Type clazz) {
-        return JSON.parseObject(input, clazz);
+        return GsonUtils.fromJson(input, clazz);
     }
 
     @Override

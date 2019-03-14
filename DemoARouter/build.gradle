@@ -46,6 +46,6 @@ dependencies {
     implementation 'com.alibaba:arouter-api:1.4.1'
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
 
-    implementation rootProject.ext.dependencies["fastjson"]
+    implementation 'com.blankj:utilcode:1.23.7'
 
 }

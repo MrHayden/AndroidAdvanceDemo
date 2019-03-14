@@ -3,8 +3,8 @@ package com.xxm.demoarouter.activity;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
 
 import com.alibaba.android.arouter.facade.Postcard;
 import com.alibaba.android.arouter.facade.callback.NavCallback;
@@ -17,6 +17,8 @@ import com.xxm.demoarouter.service.SayHelloProvider;
 import com.xxm.demoarouter.service.SingleProvider;
 
 public class MainActivity extends AppCompatActivity {
+
+    private final String TAG = MainActivity.class.getSimpleName();
 
     private static Activity activity;
 
@@ -43,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onInterrupt(Postcard postcard) {
                 super.onInterrupt(postcard);
-                Toast.makeText(MainActivity.this, "被拦截了", Toast.LENGTH_SHORT).show();
+                Log.e(TAG,"被拦截了");
             }
         });
     }
