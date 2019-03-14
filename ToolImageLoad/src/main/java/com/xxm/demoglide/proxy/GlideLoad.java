@@ -3,10 +3,8 @@ package com.xxm.demoglide.proxy;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.support.v4.app.Fragment;
 import android.widget.ImageView;
-import android.widget.ImageView.ScaleType;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestBuilder;
