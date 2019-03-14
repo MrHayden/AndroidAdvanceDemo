@@ -18,7 +18,8 @@ ext {
             "demovitamio"    : "com.xxm.demovitamio",
             "demoarouter"    : "com.xxm.demoarouter",
             "testmodel"      : "com.xxm.testmodel",
-            "demoannotations": "com.xxm.demoannotations"
+            "demoannotations": "com.xxm.demoannotations",
+            "demoglide"      : "com.xxm.demoglide"
     ]
 
     //version配置
@@ -38,7 +39,7 @@ ext {
             'design'                  : "com.android.support:design:${versions["support-version"]}",
             'animated-vector-drawable': "com.android.support:animated-vector-drawable:${versions["support-version"]}",
             'junit'                   : "junit:junit:${versions["junit-version"]}",
-            'support-annotations':"com.android.support:support-annotations:${versions["support-version"]}"
+            'support-annotations'     : "com.android.support:support-annotations:${versions["support-version"]}"
     ]
     //依赖第三方配置
     dependencies = [
@@ -67,8 +68,8 @@ ext {
             "converter-gson"                       : "com.squareup.retrofit2:converter-gson:2.4.0",
             "adapter-rxjava"                       : "com.squareup.retrofit2:adapter-rxjava2:2.4.0",
             //glide图片加载
-            "glide"                                : "com.github.bumptech.glide:glide:4.6.1",
-            "glide-compiler"                       : "com.github.bumptech.glide:compiler:4.6.1",
+            "glide"                                : "com.github.bumptech.glide:glide:4.9.0",
+            "glide-compiler"                       : "com.github.bumptech.glide:compiler:4.9.0",
             //json解析
             "gson"                                 : "com.google.code.gson:gson:2.8.2",
             //material-dialogs

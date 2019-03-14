@@ -1,2 +1,2 @@
-include ':app', ':DemoLiveDataBus', ':DemoVitamio', ':DemoCustomView', ':DemoARouter', ':AIDL_Server', ':AIDL_Client', ':SimpleTestModel','DemoAnnotations'
-include ':ToolHttp', ':ToolBase', ':ToolVitamio'
+include ':app', ':DemoLiveDataBus', ':DemoVitamio', ':DemoCustomView', ':DemoARouter', ':AIDL_Server', ':AIDL_Client', ':SimpleTestModel', ':ToolImageLoad'
+include ':ToolHttp', ':ToolBase', ':ToolVitamio','ToolAnnotations'

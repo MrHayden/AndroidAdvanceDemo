@@ -30,9 +30,7 @@ public class MainActivity extends BaseActivity {
     }
 
     @OnClick({R.id.button_1, R.id.button_2, R.id.button_3, R.id.button_4})
-    @Override
     public void onClick(View v) {
-        super.onClick(v);
         switch (v.getId()) {
             case R.id.button_1:
                 goToActivity(TwoActivity.class);

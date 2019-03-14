@@ -46,9 +46,7 @@ public class TwoActivity extends BaseActivity {
     }
 
     @OnClick({R.id.button_1, R.id.button_2})
-    @Override
     public void onClick(View v) {
-        super.onClick(v);
         switch (v.getId()) {
             case R.id.button_1:
                 LiveDataBusUtil.getInstance().setLiveDataBusBeanValue("key_5", "本类发的消息");

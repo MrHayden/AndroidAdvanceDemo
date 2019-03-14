@@ -9,6 +9,11 @@ ToolBase：包含base类，rxbus,livedatabus,retrofit,glide,permission，图片�
 
 ToolVitamio： vitamio视频播放器；
 
+ToolImageLoad: 图片加载框架;
+                //在Application中初始化图片加载框架，可以选择Glide,Fresco、Picasso等。
+                ImageLoadProxyUtil.getInstance().init(new GlideLoad());
+                使用代理模式，可以动态选择不同的图片加载框架.
+
 DemoAnnotations：自定义注解和动态代理，实现类似butterknife功能；
 
 #### 安装教程

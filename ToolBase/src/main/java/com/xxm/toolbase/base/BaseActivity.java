@@ -23,7 +23,7 @@ import cn.bingoogolapple.swipebacklayout.BGASwipeBackHelper;
 /**
  * Created by xxm on 2018/11/29 0029
  */
-public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener, BGASwipeBackHelper.Delegate, Observer<LiveDataBusBean> {
+public abstract class BaseActivity extends AppCompatActivity implements BGASwipeBackHelper.Delegate, Observer<LiveDataBusBean> {
 
     public static String TAG = "BaseActivity";
     protected BaseActivity mContext;
@@ -205,10 +205,6 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     public void startBrowserWebUrl(String url) {
         if (TextUtils.isEmpty(url)) return;
         startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
-    }
-
-    @Override
-    public void onClick(View v) {
     }
 
     /**
