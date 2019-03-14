@@ -43,7 +43,7 @@ public class GlideLoad implements IImageLoad {
     }
 
     public void showImage(String url, ImageView imageView, BeanGlideImg beanGlideImg) {
-        getReqBuilder(null, url, imageView).apply(getRequestOptions(beanGlideImg)).into(imageView);
+        getReqBuilder(url, imageView).apply(getRequestOptions(beanGlideImg)).into(imageView);
     }
 
     public void showImage(Fragment fragment, String url, ImageView imageView) {
@@ -71,20 +71,6 @@ public class GlideLoad implements IImageLoad {
         return reqBuilder.transition(DrawableTransitionOptions.withCrossFade());
     }
 
-    public RequestOptions getRequestOptions(ImageView imageView) {
-        RequestOptions requestOptions = new RequestOptions();
-        ScaleType scaleType = imageView.getScaleType();
-        if (scaleType == ScaleType.CENTER_CROP) {
-            requestOptions.centerCrop();
-        } else {
-            requestOptions.fitCenter();
-        }
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN && imageView.getAdjustViewBounds()) {
-            requestOptions.override(Target.SIZE_ORIGINAL);
-        }
-        return requestOptions;
-    }
-
     public RequestOptions getRequestOptions(BeanGlideImg glideImgInfo) {
         RequestOptions requestOptions = new RequestOptions();
 
@@ -98,9 +84,8 @@ public class GlideLoad implements IImageLoad {
         else if (glideImgInfo.getErrorImg() != null)
             requestOptions.error(glideImgInfo.getErrorImg());
 
-        if (glideImgInfo.isAdjustBounds()) {
+        if (glideImgInfo.isAdjustBounds())
             requestOptions.override(Target.SIZE_ORIGINAL);
-        }
 
         if (glideImgInfo.isRound())
             requestOptions.transform(new GlideRoundTransform(glideImgInfo.getBorderWidth(), glideImgInfo.getBorderColor()));
