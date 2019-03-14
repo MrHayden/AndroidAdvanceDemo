@@ -66,51 +66,55 @@ public class GlideRoundTransform extends BitmapTransformation {
     @SuppressWarnings("PMD.CompareObjectsWithEquals")
     @Override
     protected Bitmap transform(@NonNull BitmapPool pool, @NonNull Bitmap inBitmap, int outWidth, int outHeight) {
-        int destMinEdge = Math.min(outWidth, outHeight);
-        float radius = destMinEdge / 2f;
+        if (borderWidth == 0)
+            return TransformationUtils.circleCrop(pool, inBitmap, outWidth, outHeight);
+        else {
+            int destMinEdge = Math.min(outWidth, outHeight);
+            float radius = destMinEdge / 2f;
 
-        int srcWidth = inBitmap.getWidth();
-        int srcHeight = inBitmap.getHeight();
+            int srcWidth = inBitmap.getWidth();
+            int srcHeight = inBitmap.getHeight();
 
-        float scaleX = destMinEdge / (float) srcWidth;
-        float scaleY = destMinEdge / (float) srcHeight;
-        float maxScale = Math.max(scaleX, scaleY);
+            float scaleX = destMinEdge / (float) srcWidth;
+            float scaleY = destMinEdge / (float) srcHeight;
+            float maxScale = Math.max(scaleX, scaleY);
 
-        float scaledWidth = maxScale * srcWidth;
-        float scaledHeight = maxScale * srcHeight;
-        float left = (destMinEdge - scaledWidth) / 2f;
-        float top = (destMinEdge - scaledHeight) / 2f;
+            float scaledWidth = maxScale * srcWidth;
+            float scaledHeight = maxScale * srcHeight;
+            float left = (destMinEdge - scaledWidth) / 2f;
+            float top = (destMinEdge - scaledHeight) / 2f;
 
-        RectF destRect = new RectF(left + borderWidth, top + borderWidth, left + scaledWidth - borderWidth, top + scaledHeight - borderWidth);
+            RectF destRect = new RectF(left + borderWidth, top + borderWidth, left + scaledWidth - borderWidth, top + scaledHeight - borderWidth);
 
-        // Alpha is required for this transformation.
-        Bitmap toTransform = TransformationUtils.getAlphaSafeBitmap(pool, inBitmap);
+            // Alpha is required for this transformation.
+            Bitmap toTransform = TransformationUtils.getAlphaSafeBitmap(pool, inBitmap);
 
-        Bitmap result = pool.get(destMinEdge, destMinEdge, Bitmap.Config.ARGB_8888);
-        result.setHasAlpha(true);
+            Bitmap result = pool.get(destMinEdge, destMinEdge, Bitmap.Config.ARGB_8888);
+            result.setHasAlpha(true);
 
-        TransformationUtils.BITMAP_DRAWABLE_LOCK.lock();
-        try {
-            Canvas canvas = new Canvas(result);
-            // Draw a circle
-            canvas.drawCircle(radius, radius, radius - borderWidth, TransformationUtils.CIRCLE_CROP_SHAPE_PAINT);
-            // Draw the bitmap in the circle
-            canvas.drawBitmap(toTransform, null, destRect, TransformationUtils.CIRCLE_CROP_BITMAP_PAINT);
+            TransformationUtils.BITMAP_DRAWABLE_LOCK.lock();
+            try {
+                Canvas canvas = new Canvas(result);
+                // Draw a circle
+                canvas.drawCircle(radius, radius, radius - borderWidth, TransformationUtils.CIRCLE_CROP_SHAPE_PAINT);
+                // Draw the bitmap in the circle
+                canvas.drawBitmap(toTransform, null, destRect, TransformationUtils.CIRCLE_CROP_BITMAP_PAINT);
 
-            //画圆形边框
-            borderPaint.setColor(borderColor);
-            borderPaint.setStrokeWidth(borderWidth);
-            canvas.drawCircle(radius, radius, radius - borderWidth / 2 - 1, borderPaint);
-            TransformationUtils.clear(canvas);
-        } finally {
-            TransformationUtils.BITMAP_DRAWABLE_LOCK.unlock();
+                //画圆形边框
+                borderPaint.setColor(borderColor);
+                borderPaint.setStrokeWidth(borderWidth);
+                canvas.drawCircle(radius, radius, radius - borderWidth / 2 - 1, borderPaint);
+                TransformationUtils.clear(canvas);
+            } finally {
+                TransformationUtils.BITMAP_DRAWABLE_LOCK.unlock();
+            }
+
+            if (!toTransform.equals(inBitmap)) {
+                pool.put(toTransform);
+            }
+
+            return result;
         }
-
-        if (!toTransform.equals(inBitmap)) {
-            pool.put(toTransform);
-        }
-
-        return result;
     }
 
     @Override
