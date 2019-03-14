@@ -29,37 +29,40 @@ public class GlideLoad implements IImageLoad {
 
     @Override
     public void loadImg(Object object, String url, ImageView imageView, BeanGlideImg beanGlideImg) {
-        if (object != null && object instanceof Fragment) {
-            showImage((Fragment) object, url, imageView, beanGlideImg);
-        } else {
-            showImage(url, imageView, beanGlideImg);
+        showImage(object, url, imageView, beanGlideImg);
+    }
+
+    @Override
+    public void loadImg(Object object, int resId, ImageView imageView, BeanGlideImg beanGlideImg) {
+        showImage(object, resId, imageView, beanGlideImg);
+    }
+
+    private void showImage(Object object, String url, ImageView imageView, BeanGlideImg beanGlideImg) {
+        RequestBuilder<Drawable> requestBuilder;
+        requestBuilder = getReqBuilder(object, url, imageView);
+        if (beanGlideImg != null) {
+            requestBuilder.apply(getRequestOptions(beanGlideImg));
         }
+        requestBuilder.into(imageView);
     }
 
-    public void showImage(Fragment fragment, String url, ImageView imageView, BeanGlideImg beanGlideImg) {
-        getReqBuilder(fragment, url, imageView).apply(getRequestOptions(beanGlideImg)).into(imageView);
+    private void showImage(Object object, int resId, ImageView imageView, BeanGlideImg beanGlideImg) {
+        RequestBuilder<Drawable> requestBuilder;
+        requestBuilder = getReqBuilder(object, resId, imageView);
+        if (beanGlideImg != null) {
+            requestBuilder.apply(getRequestOptions(beanGlideImg));
+        }
+        requestBuilder.into(imageView);
     }
 
-    public void showImage(String url, ImageView imageView, BeanGlideImg beanGlideImg) {
-        getReqBuilder(url, imageView).apply(getRequestOptions(beanGlideImg)).into(imageView);
-    }
-
-    public void showImage(Fragment fragment, String url, ImageView imageView) {
-        showImage(fragment, url, imageView, null);
-    }
-
-    public void showImage(String url, ImageView imageView) {
-        showImage(url, imageView, null);
-    }
-
-    public RequestBuilder<Drawable> getReqBuilder(String url, ImageView imageView) {
+    private RequestBuilder<Drawable> getReqBuilder(String url, ImageView imageView) {
         return getReqBuilder(null, url, imageView);
     }
 
-    public RequestBuilder<Drawable> getReqBuilder(Fragment fragment, String url, ImageView imageView) {
+    private RequestBuilder<Drawable> getReqBuilder(Object object, String url, ImageView imageView) {
         RequestBuilder<Drawable> reqBuilder = null;
-        if (fragment != null) {
-            reqBuilder = Glide.with(fragment).load(url);
+        if (object != null && object instanceof Fragment) {
+            reqBuilder = Glide.with((Fragment) object).load(url);
         } else {
             Context context = imageView.getContext();
             if (context instanceof Activity)
@@ -69,8 +72,27 @@ public class GlideLoad implements IImageLoad {
         return reqBuilder.transition(DrawableTransitionOptions.withCrossFade());
     }
 
-    public RequestOptions getRequestOptions(BeanGlideImg glideImgInfo) {
+    private RequestBuilder<Drawable> getReqBuilder(int resId, ImageView imageView) {
+        return getReqBuilder(null, resId, imageView);
+    }
+
+    private RequestBuilder<Drawable> getReqBuilder(Object object, int resId, ImageView imageView) {
+        RequestBuilder<Drawable> reqBuilder = null;
+        if (object != null && object instanceof Fragment) {
+            reqBuilder = Glide.with((Fragment) object).load(resId);
+        } else {
+            Context context = imageView.getContext();
+            if (context instanceof Activity)
+                reqBuilder = Glide.with((Activity) context).load(resId);
+        }
+        //交叉淡入变换
+        return reqBuilder.transition(DrawableTransitionOptions.withCrossFade());
+    }
+
+    private RequestOptions getRequestOptions(BeanGlideImg glideImgInfo) {
         RequestOptions requestOptions = new RequestOptions();
+
+        if (glideImgInfo == null) return requestOptions;
 
         if (glideImgInfo.getPlaceHolderRes() != 0)
             requestOptions.placeholder(glideImgInfo.getPlaceHolderRes());

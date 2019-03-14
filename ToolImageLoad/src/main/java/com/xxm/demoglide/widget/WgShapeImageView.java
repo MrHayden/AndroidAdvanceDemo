@@ -64,6 +64,16 @@ public class WgShapeImageView extends WgScalemageView {
     }
 
     public void setUrl(String url) {
+        setGlideImageInfo();
+        ImageLoadProxyUtil.getInstance().loadImage(url, this, mGlideImageInfo);
+    }
+
+    public void setResId(int resId) {
+        setGlideImageInfo();
+        ImageLoadProxyUtil.getInstance().loadImage(resId, this, mGlideImageInfo);
+    }
+
+    private void setGlideImageInfo(){
         mGlideImageInfo.setBorderWidth(borderWidth)
                 .setBorderColor(borderColor)
                 .setScaleType(getScaleType() == ScaleType.CENTER_CROP ? ScaleType.CENTER_CROP : ScaleType.FIT_CENTER)
@@ -73,7 +83,6 @@ public class WgShapeImageView extends WgScalemageView {
                 .setErrorImgRes(errorImgResId);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN)
             mGlideImageInfo.setAdjustBounds(getAdjustViewBounds());
-        ImageLoadProxyUtil.getInstance().loadImage(url, this, mGlideImageInfo);
     }
 
     public void setBorderColor(int borderColor) {

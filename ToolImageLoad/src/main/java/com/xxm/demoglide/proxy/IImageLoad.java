@@ -20,4 +20,6 @@ public interface IImageLoad {
      */
     void loadImg(Object object, String url, ImageView imageView, BeanGlideImg beanGlideImg);
 
+    void loadImg(Object object, int resId, ImageView imageView, BeanGlideImg beanGlideImg);
+
 }

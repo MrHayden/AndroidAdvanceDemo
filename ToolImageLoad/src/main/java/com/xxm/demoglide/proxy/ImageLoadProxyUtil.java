@@ -11,7 +11,7 @@ import com.xxm.demoglide.bean.BeanGlideImg;
  */
 public class ImageLoadProxyUtil {
 
-    private static ImageLoadProxyUtil instance;
+    private static volatile ImageLoadProxyUtil instance;
     private IImageLoad iImageLoad;
 
     private ImageLoadProxyUtil() {
@@ -20,7 +20,11 @@ public class ImageLoadProxyUtil {
 
     public static ImageLoadProxyUtil getInstance() {
         if (instance == null) {
-            instance = new ImageLoadProxyUtil();
+            synchronized (ImageLoadProxyUtil.class) {
+                if (instance == null) {
+                    instance = new ImageLoadProxyUtil();
+                }
+            }
         }
         return instance;
     }
@@ -33,6 +37,10 @@ public class ImageLoadProxyUtil {
         loadImage(url, imageView, null);
     }
 
+    public void loadImage(Object object, String url, ImageView imageView) {
+        loadImage(object, url, imageView, null);
+    }
+
     public void loadImage(String url, ImageView imageView, BeanGlideImg beanGlideImg) {
         loadImage(null, url, imageView, beanGlideImg);
     }
@@ -43,6 +51,26 @@ public class ImageLoadProxyUtil {
             return;
         }
         iImageLoad.loadImg(object, url, imageView, beanGlideImg);
+    }
+
+    public void loadImage(int resId, ImageView imageView) {
+        loadImage(resId, imageView, null);
+    }
+
+    public void loadImage(Object object, int resId, ImageView imageView) {
+        loadImage(object, resId, imageView, null);
+    }
+
+    public void loadImage(int resId, ImageView imageView, BeanGlideImg beanGlideImg) {
+        loadImage(null, resId, imageView, beanGlideImg);
+    }
+
+    public void loadImage(Object object, int resId, ImageView imageView, BeanGlideImg beanGlideImg) {
+        if (iImageLoad == null) {
+            Log.e(getClass().getSimpleName(), "请调用init()方法,初始化图片加载框架.");
+            return;
+        }
+        iImageLoad.loadImg(object, resId, imageView, beanGlideImg);
     }
 
 }
