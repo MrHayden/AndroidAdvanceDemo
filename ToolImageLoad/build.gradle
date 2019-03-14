@@ -1,8 +1,8 @@
-if (isModule) {
+//if (isModule) {
     apply plugin: 'com.android.library'
-} else {
-    apply plugin: 'com.android.application'
-}
+//} else {
+//    apply plugin: 'com.android.application'
+//}
 
 
 android {
@@ -10,9 +10,9 @@ android {
 
     defaultConfig {
         //组件模式没有applicationId
-        if (!isModule) {
-            applicationId appId.demoglide
-        }
+//        if (!isModule) {
+//            applicationId appId.demoglide
+//        }
 
         minSdkVersion androidConfig.minSdkVersion
         targetSdkVersion androidConfig.targetSdkVersion
@@ -31,7 +31,7 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation rootProject.ext.support["appcompat-v7"]
     implementation rootProject.ext.support["constraint-layout"]

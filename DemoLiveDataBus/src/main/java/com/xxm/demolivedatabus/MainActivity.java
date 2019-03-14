@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.xxm.demoglide.widget.WgShapeImageView;
 import com.xxm.toolbase.base.BaseActivity;
 import com.xxm.toolbase.bus.LiveDataBusUtil;
 import com.xxm.toolbase.entity.LiveDataBusBean;
@@ -18,6 +19,9 @@ public class MainActivity extends BaseActivity {
     TextView tvMsg;
     private int i, j, k = 0;
 
+    @BindView(R.id.wg_img)
+    WgShapeImageView imageView;
+
     @Override
     public int initContentView(Bundle savedInstanceState) {
         return R.layout.activity_main;
@@ -27,6 +31,10 @@ public class MainActivity extends BaseActivity {
     public void initData() {
         super.initData();
         observerLiveDataBus(new String[]{"key_1","key_3","key_4"});
+
+        String url = "https://res.xfkjd.cn/wwj.png";
+        imageView.setUrl(url);
+
     }
 
     @OnClick({R.id.button_1, R.id.button_2, R.id.button_3, R.id.button_4})

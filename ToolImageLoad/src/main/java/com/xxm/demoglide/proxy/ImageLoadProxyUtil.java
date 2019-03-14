@@ -38,7 +38,7 @@ public class ImageLoadProxyUtil {
     }
 
     public void loadImage(Object object, String url, ImageView imageView, BeanGlideImg beanGlideImg) {
-        if (imageView == null) {
+        if (iImageLoad == null) {
             Log.e(getClass().getSimpleName(), "请调用init()方法,初始化图片加载框架.");
             return;
         }

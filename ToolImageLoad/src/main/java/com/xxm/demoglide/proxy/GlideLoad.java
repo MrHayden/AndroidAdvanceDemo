@@ -29,6 +29,15 @@ public class GlideLoad implements IImageLoad {
     public GlideLoad() {
     }
 
+    @Override
+    public void loadImg(Object object, String url, ImageView imageView, BeanGlideImg beanGlideImg) {
+        if (object != null && object instanceof Fragment) {
+            showImage((Fragment) object, url, imageView, beanGlideImg);
+        } else {
+            showImage(url, imageView, beanGlideImg);
+        }
+    }
+
     public void showImage(Fragment fragment, String url, ImageView imageView, BeanGlideImg beanGlideImg) {
         getReqBuilder(fragment, url, imageView).apply(getRequestOptions(beanGlideImg)).into(imageView);
     }
@@ -78,6 +87,21 @@ public class GlideLoad implements IImageLoad {
 
     public RequestOptions getRequestOptions(BeanGlideImg glideImgInfo) {
         RequestOptions requestOptions = new RequestOptions();
+
+        if (glideImgInfo.getPlaceHolderRes() != 0)
+            requestOptions.placeholder(glideImgInfo.getPlaceHolderRes());
+        else if (glideImgInfo.getPlaceHolder() != null)
+            requestOptions.placeholder(glideImgInfo.getPlaceHolder());
+
+        if (glideImgInfo.getErrorImgRes() != 0)
+            requestOptions.error(glideImgInfo.getErrorImgRes());
+        else if (glideImgInfo.getErrorImg() != null)
+            requestOptions.error(glideImgInfo.getErrorImg());
+
+        if (glideImgInfo.isAdjustBounds()) {
+            requestOptions.override(Target.SIZE_ORIGINAL);
+        }
+
         if (glideImgInfo.isRound())
             requestOptions.transform(new GlideRoundTransform(glideImgInfo.getBorderWidth(), glideImgInfo.getBorderColor()));
         else if (glideImgInfo.getRoundingRadius() != 0)
@@ -86,27 +110,8 @@ public class GlideLoad implements IImageLoad {
             requestOptions.transform(new GlideFitCenterTransform(glideImgInfo.getBorderWidth(), glideImgInfo.getBorderColor()));
         else
             requestOptions.transform(new GlideCenterCropTransform(glideImgInfo.getBorderWidth(), glideImgInfo.getBorderColor()));
-        if (glideImgInfo.getPlaceHolderRes() != 0)
-            requestOptions.placeholder(glideImgInfo.getPlaceHolderRes());
-        else if (glideImgInfo.getPlaceHolder() != null)
-            requestOptions.placeholder(glideImgInfo.getPlaceHolder());
-        if (glideImgInfo.getErrorImgRes() != 0)
-            requestOptions.placeholder(glideImgInfo.getErrorImgRes());
-        else if (glideImgInfo.getErrorImg() != null)
-            requestOptions.placeholder(glideImgInfo.getErrorImg());
-        if (glideImgInfo.isAdjustBounds()) {
-            requestOptions.override(Target.SIZE_ORIGINAL);
-        }
+
         return requestOptions;
     }
 
-    @Override
-    public void loadImg(Object object, String url, ImageView imageView, BeanGlideImg beanGlideImg) {
-        if (object != null && object instanceof Fragment) {
-            showImage((Fragment) object, url, imageView, beanGlideImg);
-        } else {
-            showImage(url, imageView, beanGlideImg);
-        }
-
-    }
 }

@@ -6,6 +6,17 @@
     android:background="@color/colorPrimary"
     android:fitsSystemWindows="true">
 
+    <com.xxm.demoglide.widget.WgShapeImageView
+        android:id="@+id/wg_img"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:wgRadius="10dp" />
+
     <Button
         android:id="@+id/button_1"
         android:layout_width="wrap_content"

@@ -19,8 +19,8 @@ public class WgShapeImageView extends WgScalemageView {
     protected int borderColor;
     private int radius;
     private int shapeType;
-    private int placeHolder;
-    private int errorImg;
+    private int placeHolderResId;
+    private int errorImgResId;
 
     private BeanGlideImg mGlideImageInfo;
 
@@ -39,10 +39,6 @@ public class WgShapeImageView extends WgScalemageView {
     @Override
     protected void initThis(AttributeSet attrs) {
         super.initThis(attrs);
-        //默认占位图
-        placeHolder = R.mipmap.ic_launcher;
-        //加载失败图
-        errorImg = R.mipmap.ic_launcher;
         if (attrs != null) {
             TypedArray ta = mContext.obtainStyledAttributes(attrs, R.styleable.WgShapeImageView);
             int count = ta.getIndexCount();
@@ -57,9 +53,9 @@ public class WgShapeImageView extends WgScalemageView {
                 } else if (itemId == R.styleable.WgShapeImageView_wgShapeType) {
                     shapeType = ta.getInteger(itemId, 0);
                 } else if (itemId == R.styleable.WgShapeImageView_wgPlaceHolder) {
-                    placeHolder = ta.getResourceId(itemId, R.mipmap.ic_launcher);
+                    placeHolderResId = ta.getResourceId(itemId, R.mipmap.default_place_holder_img);
                 } else if (itemId == R.styleable.WgShapeImageView_wgErrorImg) {
-                    errorImg = ta.getResourceId(itemId, R.mipmap.ic_launcher);
+                    errorImgResId = ta.getResourceId(itemId, R.mipmap.default_error_img);
                 }
             }
             ta.recycle();
@@ -73,8 +69,8 @@ public class WgShapeImageView extends WgScalemageView {
                 .setScaleType(getScaleType() == ScaleType.CENTER_CROP ? ScaleType.CENTER_CROP : ScaleType.FIT_CENTER)
                 .setRoundingRadius(radius)
                 .setRound(shapeType != 0)
-                .setPlaceHolderRes(placeHolder)
-                .setErrorImgRes(errorImg);
+                .setPlaceHolderRes(placeHolderResId)
+                .setErrorImgRes(errorImgResId);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN)
             mGlideImageInfo.setAdjustBounds(getAdjustViewBounds());
         ImageLoadProxyUtil.getInstance().loadImage(url, this, mGlideImageInfo);
@@ -96,11 +92,11 @@ public class WgShapeImageView extends WgScalemageView {
         this.shapeType = shapeType;
     }
 
-    public void setPlaceHolder(int placeHolder) {
-        this.placeHolder = placeHolder;
+    public void setPlaceHolderResId(int placeHolderResId) {
+        this.placeHolderResId = placeHolderResId;
     }
 
-    public void setErrorImg(int errorImg) {
-        this.errorImg = errorImg;
+    public void setErrorImgResId(int errorImgResId) {
+        this.errorImgResId = errorImgResId;
     }
 }

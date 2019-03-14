@@ -59,9 +59,4 @@ dependencies {
     api rootProject.ext.dependencies["rxjava"]
     api rootProject.ext.dependencies["rxandroid"]
 
-    //glide图片加载
-    api rootProject.ext.dependencies["glide"]
-    //annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
-    api rootProject.ext.dependencies["glide-compiler"]
-
 }

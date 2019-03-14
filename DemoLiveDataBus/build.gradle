@@ -31,5 +31,5 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation project(":ToolBase")
-
+    implementation project(":ToolImageLoad")
 }

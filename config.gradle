@@ -19,7 +19,6 @@ ext {
             "demoarouter"    : "com.xxm.demoarouter",
             "testmodel"      : "com.xxm.testmodel",
             "demoannotations": "com.xxm.demoannotations",
-            "demoglide"      : "com.xxm.demoglide"
     ]
 
     //version配置
