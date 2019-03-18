@@ -7,8 +7,8 @@ import android.widget.Toast;
 
 import com.xxm.demoglide.widget.WgShapeImageView;
 import com.xxm.toolbase.base.BaseActivity;
-import com.xxm.toolbase.bus.LiveDataBusUtil;
-import com.xxm.toolbase.entity.LiveDataBusBean;
+import com.xxm.toolhttp.retrofit.bus.LiveDataBusBean;
+import com.xxm.toolhttp.retrofit.bus.LiveDataBusUtil;
 
 import butterknife.BindView;
 import butterknife.OnClick;

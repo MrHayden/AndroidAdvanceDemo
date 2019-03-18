@@ -4,7 +4,7 @@ import android.app.Application;
 
 import com.xxm.demoglide.proxy.GlideLoad;
 import com.xxm.demoglide.proxy.ImageLoadProxyUtil;
-import com.xxm.toolbase.utils.Utils;
+import com.xxm.toolhttp.retrofit.utils.Utils;
 
 import cn.bingoogolapple.swipebacklayout.BGASwipeBackHelper;
 

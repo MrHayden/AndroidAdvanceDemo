@@ -7,15 +7,14 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
-import android.view.View;
 
 import com.jaeger.library.StatusBarUtil;
 import com.xxm.toolbase.R;
-import com.xxm.toolbase.bus.LiveDataBusUtil;
-import com.xxm.toolbase.entity.LiveDataBusBean;
 import com.xxm.toolbase.utils.AppManager;
 import com.xxm.toolbase.utils.UIHelper;
 import com.xxm.toolbase.view.dlg.DlgProcessBar;
+import com.xxm.toolhttp.retrofit.bus.LiveDataBusBean;
+import com.xxm.toolhttp.retrofit.bus.LiveDataBusUtil;
 
 import butterknife.ButterKnife;
 import cn.bingoogolapple.swipebacklayout.BGASwipeBackHelper;
