@@ -28,4 +28,11 @@ dependencies {
     implementation project(":ToolBase")
     implementation project(":ToolImageLoad")
 
+    api rootProject.ext.dependencies["butterknife"]
+    //annotationProcessor  自动生成java文件
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+
+    //滑动返回
+    implementation rootProject.ext.dependencies["backLayout"]
+
 }

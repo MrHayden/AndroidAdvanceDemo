@@ -1,13 +1,29 @@
 package com.xxm.advancedemo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import com.xxm.advancedemo.base.BaseBackActivity;
+
+import butterknife.BindView;
+
+public class MainActivity extends BaseBackActivity {
+
+    @BindView(R.id.tv_test)
+    TextView tv_test;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public int initContentView(Bundle savedInstanceState) {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    public void initData() {
+        tv_test.setText("测试");
+    }
+
+    @Override
+    public boolean isSupportSwipeBack() {
+        return false;
     }
 }

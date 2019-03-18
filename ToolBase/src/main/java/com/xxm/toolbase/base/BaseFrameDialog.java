@@ -19,8 +19,6 @@ import com.xxm.toolbase.R;
 import com.xxm.toolbase.utils.StringUtils;
 import com.xxm.toolbase.utils.UIHelper;
 
-import butterknife.ButterKnife;
-
 /**
  * Created by shuaq on 2016/8/25.
  */
@@ -33,7 +31,6 @@ public class BaseFrameDialog extends Dialog implements View.OnClickListener {
     protected Context mContext;
 
     protected View rootView;
-
 
     protected int flags;
 
@@ -77,7 +74,6 @@ public class BaseFrameDialog extends Dialog implements View.OnClickListener {
 //        }
         rootView = getLayoutView();
         setContentView(rootView);
-        ButterKnife.bind(this, rootView);
         setClick(initClickView(), initClickViewId());
         Window window = getWindow();
         if (window != null) {

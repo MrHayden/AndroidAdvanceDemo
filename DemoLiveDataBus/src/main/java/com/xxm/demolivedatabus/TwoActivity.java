@@ -9,15 +9,11 @@ import com.xxm.toolbase.base.BaseActivity;
 import com.xxm.toolhttp.retrofit.bus.LiveDataBusBean;
 import com.xxm.toolhttp.retrofit.bus.LiveDataBusUtil;
 
-import butterknife.BindView;
-import butterknife.OnClick;
-
 /**
  * Created by xxm on 2019/2/26 0026
  */
-public class TwoActivity extends BaseActivity {
+public class TwoActivity extends BaseActivity implements View.OnClickListener {
 
-    @BindView(R.id.tv_textview)
     TextView tvMsg;
 
     @Override
@@ -26,9 +22,17 @@ public class TwoActivity extends BaseActivity {
     }
 
     @Override
+    public void initView() {
+        super.initView();
+        tvMsg = findViewById(R.id.tv_textview);
+        findViewById(R.id.button_1).setOnClickListener(this);
+        findViewById(R.id.button_2).setOnClickListener(this);
+    }
+
+    @Override
     public void initData() {
         super.initData();
-        observerLiveDataBus(new String[]{"key_2","key_5"});
+        observerLiveDataBus(new String[]{"key_2", "key_5"});
     }
 
     @Override
@@ -44,7 +48,7 @@ public class TwoActivity extends BaseActivity {
         }
     }
 
-    @OnClick({R.id.button_1, R.id.button_2})
+    @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button_1:

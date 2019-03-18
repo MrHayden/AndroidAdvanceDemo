@@ -9,12 +9,6 @@ android {
         versionCode androidConfig.versionCode
         versionName androidConfig.versionName
 
-        //butterknife
-        javaCompileOptions {
-            annotationProcessorOptions {
-                includeCompileClasspath = true
-            }
-        }
     }
 
     buildTypes {
@@ -34,13 +28,6 @@ dependencies {
 
     //透明状态栏
     api rootProject.ext.dependencies["statusbarutil"]
-
-    //滑动返回
-    api rootProject.ext.dependencies["backLayout"]
-
-    api rootProject.ext.dependencies["butterknife"]
-    //annotationProcessor  自动生成java文件  'com.jakewharton:butterknife-compiler:8.8.1'
-    api rootProject.ext.dependencies["butterknife-compiler"]
 
     //material-dialogs
     api rootProject.ext.dependencies["material-dialogs-core"]

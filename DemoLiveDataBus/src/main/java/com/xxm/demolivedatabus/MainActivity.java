@@ -10,21 +10,27 @@ import com.xxm.toolbase.base.BaseActivity;
 import com.xxm.toolhttp.retrofit.bus.LiveDataBusBean;
 import com.xxm.toolhttp.retrofit.bus.LiveDataBusUtil;
 
-import butterknife.BindView;
-import butterknife.OnClick;
+public class MainActivity extends BaseActivity implements View.OnClickListener {
 
-public class MainActivity extends BaseActivity {
-
-    @BindView(R.id.tv_textview)
     TextView tvMsg;
     private int i, j, k = 0;
 
-    @BindView(R.id.wg_img)
     WgShapeImageView imageView;
 
     @Override
     public int initContentView(Bundle savedInstanceState) {
         return R.layout.activity_main;
+    }
+
+    @Override
+    public void initView() {
+        super.initView();
+        tvMsg = findViewById(R.id.tv_textview);
+        imageView = findViewById(R.id.wg_img);
+        findViewById(R.id.button_1).setOnClickListener(this);
+        findViewById(R.id.button_2).setOnClickListener(this);
+        findViewById(R.id.button_3).setOnClickListener(this);
+        findViewById(R.id.button_4).setOnClickListener(this);
     }
 
     @Override
@@ -37,7 +43,7 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.button_1, R.id.button_2, R.id.button_3, R.id.button_4})
+    @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button_1:
@@ -74,11 +80,6 @@ public class MainActivity extends BaseActivity {
                 Toast.makeText(mContext, liveDataBusBean.getKeyTag() + "收到消息了"+liveDataBusBean.getValueTag(), Toast.LENGTH_SHORT).show();
                 break;
         }
-    }
-
-    @Override
-    public boolean isSupportSwipeBack() {
-        return false;
     }
 
 }
