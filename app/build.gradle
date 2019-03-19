@@ -24,11 +24,22 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    signingConfigs {
+        release {
+            storeFile file('./xxm_advance.jks')
+            keyAlias 'advance'
+            keyPassword '123456'
+            storePassword '123456'
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
 
@@ -58,3 +69,6 @@ dependencies {
     implementation rootProject.ext.dependencies["backLayout"]
 
 }
+
+// 依赖插件脚本
+apply from:'andResGuard.gradle'

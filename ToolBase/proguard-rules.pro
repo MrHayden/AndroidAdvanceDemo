@@ -107,9 +107,3 @@ public static final android.os.Parcelable$Creator *;
 -keep class **.downloader.**{*;}
 
 -keep class android.arch.**{*;}
-
-#-keep class com.xxm.toolbase.view.**{*;}
-#-keep class com.xxm.toolbase.view.wgwebkitbase.**{*;}
-#-keep class com.afollestad.materialdialogs.**{*;}
-#-keep class com.afollestad.materialdialogs.internal.**{*;}
-#-keep class cn.bingoogolapple.swipebacklayout.**{*;}

@@ -1,0 +1,44 @@
+apply plugin: 'AndResGuard'
+
+/**
+ * git地址：https://github.com/shwenzhang/AndResGuard
+ *
+ * 配置文件包括了property，whitelist, keepmapping, compress,sign
+ * property：通用属性，如是否要开启7z重新压缩apk包，是否保持路径（是否将res/drawable混淆成r/s）
+ * whitelist：白名单，即不混淆哪些资资文件名
+ * keepmapping：主要用来指定旧的mapping文件
+ * compress：是否压缩指定文件，如*.png,*.jpg,resource.arsc
+ * sign:用来对处理过后的apk进行签名
+ *
+ * AssetManager#list(String path)当您使用由7zip压缩的APK时，返回的列表的第一个元素是空字符串。＃162
+ */
+andResGuard {
+//    mappingFile = file("./resource_mapping.txt")
+    use7zip = true
+    useSign = true
+    keepRoot = false
+    // add <yourpackagename>.R.drawable.icon into whitelist.
+    // because the launcher will get the icon with his name
+    whiteList = ["R.mipmap.ic_launcher",
+                 //https://docs.fabric.io/android/crashlytics/build-tools.html
+                 "R.string.com.crashlytics.*",
+                 "R.id.*"]
+    //千万不要添加resource.asrc到compressFilePattern，除非应用程序的大小真的很重要你。
+    compressFilePattern = ["*.png",
+                           "*.jpg",
+                           "*.jpeg",
+                           "*.gif",
+//                           "resources.arsc"
+    ]
+
+    sevenzip {
+        artifact = "com.tencent.mm:SevenZip:1.2.15"
+        //path = "/usr/local/bin/7za"
+    }
+
+    /**
+     * Optional: if finalApkBackupPath is null, AndResGuard will overwrite final apk
+     * to the path which assemble[Task] write to*/
+//    finalApkBackupPath = "${project.rootDir}/final.apk"
+//    digestalg = "SHA-256"
+}

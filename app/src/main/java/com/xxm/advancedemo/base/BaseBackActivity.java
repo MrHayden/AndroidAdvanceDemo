@@ -3,6 +3,7 @@ package com.xxm.advancedemo.base;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
+import com.jaeger.library.StatusBarUtil;
 import com.xxm.advancedemo.R;
 import com.xxm.toolbase.base.BaseActivity;
 
@@ -26,6 +27,7 @@ public abstract class BaseBackActivity extends BaseActivity implements BGASwipeB
     @Override
     public void initView() {
         ButterKnife.bind(this);
+        StatusBarUtil.setColor(this,getResources().getColor(R.color.colorPrimary));
     }
 
     public abstract int initContentView(Bundle savedInstanceState);
