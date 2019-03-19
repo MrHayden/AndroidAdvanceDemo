@@ -19,6 +19,7 @@ ext {
             "demoarouter"    : "com.xxm.demoarouter",
             "testmodel"      : "com.xxm.testmodel",
             "demoannotations": "com.xxm.demoannotations",
+            "apkoptimize"    : "com.xxm.apkoptimize",
     ]
 
     //version配置
@@ -26,6 +27,7 @@ ext {
             "support-version"  : "28.0.0",
             "constraint-layout": "1.1.3",
             "junit-version"    : "4.12",
+            "multidex"         : "1.0.3"
     ]
     //support配置
     support = [
@@ -38,7 +40,8 @@ ext {
             'design'                  : "com.android.support:design:${versions["support-version"]}",
             'animated-vector-drawable': "com.android.support:animated-vector-drawable:${versions["support-version"]}",
             'junit'                   : "junit:junit:${versions["junit-version"]}",
-            'support-annotations'     : "com.android.support:support-annotations:${versions["support-version"]}"
+            'support-annotations'     : "com.android.support:support-annotations:${versions["support-version"]}",
+            'multidex'                : "com.android.support:multidex:${versions["multidex"]}"
     ]
     //依赖第三方配置
     dependencies = [

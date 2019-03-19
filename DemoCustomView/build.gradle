@@ -10,6 +10,13 @@ android {
         versionName androidConfig.versionName
     }
 
+    sourceSets{
+        main{
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            res.srcDirs = ['src/main/res']
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -24,4 +31,5 @@ dependencies {
 
     implementation rootProject.ext.support["appcompat-v7"]
     implementation rootProject.ext.support["constraint-layout"]
+    implementation rootProject.ext.support["support-annotations"]
 }

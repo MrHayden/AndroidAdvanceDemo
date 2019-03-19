@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion androidConfig.compileSdkVersion
+
+    defaultConfig {
+        applicationId appId.apkoptimize
+        minSdkVersion androidConfig.minSdkVersion
+        targetSdkVersion androidConfig.targetSdkVersion
+        versionCode androidConfig.versionCode
+        versionName androidConfig.versionName
+
+        //将SVG图片生成指定维度的PNG图片
+        vectorDrawables.generatedDensities('xhdpi', 'xxhdpi', 'xxxhdpi')
+        //使用support-v7兼容(Android 5.0+)
+        vectorDrawables.useSupportLibrary = true
+
+        //只保留指定和默认的资源
+        resConfigs('zh-rCN','ko')
+
+        //将指定的so库打包到apk
+        ndk{
+            abiFilters('armeabi-v7a')
+        }
+    }
+
+    buildTypes {
+        debug {
+            //开启代码混淆
+            minifyEnabled true
+            //启动资源压缩
+            shrinkResources true
+
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //将so库打包到APK
+    sourceSets{
+        main{
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation rootProject.ext.support["appcompat-v7"]
+    implementation rootProject.ext.support["constraint-layout"]
+}

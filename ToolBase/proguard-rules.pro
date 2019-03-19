@@ -108,15 +108,8 @@ public static final android.os.Parcelable$Creator *;
 
 -keep class android.arch.**{*;}
 
-#butterknife
--keep class butterknife.** { *; }
--dontwarn butterknife.internal.**
--keep class **$$ViewBinder { *; }
-
--keepclasseswithmembernames class * {
-    @butterknife.* <fields>;
-}
-
--keepclasseswithmembernames class * {
-    @butterknife.* <methods>;
-}
+#-keep class com.xxm.toolbase.view.**{*;}
+#-keep class com.xxm.toolbase.view.wgwebkitbase.**{*;}
+#-keep class com.afollestad.materialdialogs.**{*;}
+#-keep class com.afollestad.materialdialogs.internal.**{*;}
+#-keep class cn.bingoogolapple.swipebacklayout.**{*;}
