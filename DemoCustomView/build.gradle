@@ -32,4 +32,5 @@ dependencies {
     implementation rootProject.ext.support["appcompat-v7"]
     implementation rootProject.ext.support["constraint-layout"]
     implementation rootProject.ext.support["support-annotations"]
+    implementation rootProject.ext.support["design"]
 }
