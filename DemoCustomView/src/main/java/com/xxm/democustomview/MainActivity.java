@@ -1,5 +1,6 @@
 package com.xxm.democustomview;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.StringRes;
@@ -9,6 +10,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,6 +61,10 @@ public class MainActivity extends AppCompatActivity {
 
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         tabLayout.setupWithViewPager(pager);
+    }
+
+    public void onSurfaceView(View view){
+        startActivity(new Intent(this,MySurfaceActivity.class));
     }
 
     @Override
