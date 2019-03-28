@@ -16,6 +16,8 @@ ToolImageLoad: 图片加载框架;
 
 DemoAnnotations：自定义注解和动态代理，实现类似butterknife功能；
 
+demoHtmlAnalysis：网上抓数据，html解析；
+
 #### 安装教程
 
 1. xxxx

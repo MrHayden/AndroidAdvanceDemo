@@ -1,2 +1,2 @@
-include ':app', ':DemoLiveDataBus', ':DemoVitamio', ':DemoCustomView', ':DemoARouter', ':AIDL_Server', ':AIDL_Client', ':SimpleTestModel', ':ApkOptimize', ':ToolFuncInterface'
-include ':ToolHttp', ':ToolBase', ':ToolVitamio','ToolAnnotations', ':ToolImageLoad'
+include ':app', ':DemoLiveDataBus', ':DemoVitamio', ':DemoCustomView', ':DemoARouter', ':AIDL_Server', ':AIDL_Client', ':SimpleTestModel', ':ApkOptimize', ':demohtmlanalysis'
+include ':ToolHttp', ':ToolBase', ':ToolVitamio','ToolAnnotations', ':ToolImageLoad',':ToolFuncInterface'

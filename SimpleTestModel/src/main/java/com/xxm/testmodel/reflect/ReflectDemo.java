@@ -68,7 +68,7 @@ public class ReflectDemo {
      * @param <T>
      */
     public static <T> void invokeMethod(T cls) {
-        Class mClass = cls.getClass();
+        Class<?> mClass = cls.getClass();
         try {
             Method method = mClass.getDeclaredMethod("getB_PubInfo", String.class, int.class, String.class);
             if (method != null) {
@@ -92,7 +92,7 @@ public class ReflectDemo {
      *修改私有字段内容
      */
     public static <T> void fyField(T cls) {
-        Class mClass = cls.getClass();
+        Class<?> mClass = cls.getClass();
         Field field;
         try {
 //            field = mClass.getDeclaredField("bMsg");

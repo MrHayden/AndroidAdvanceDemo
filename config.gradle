@@ -89,6 +89,10 @@ ext {
             "leakcanary-android"                   : "com.squareup.leakcanary:leakcanary-android:1.6.2",
             "leakcanary-support-fragment"          : "com.squareup.leakcanary:leakcanary-support-fragment:1.6.2",
             //json转Object,object转json
-            "fastjson"                             : "com.alibaba:fastjson:1.2.48"
+            "fastjson"                             : "com.alibaba:fastjson:1.2.48",
+            //万能适配器
+            //RecyclerView: com.zhy:base-adapter:3.0.3   ListView: com.zhy:base-adapter:3.0.3
+            "base-adapter"                         : "com.zhy:base-adapter:3.0.3",
+            "base-rvadapter"                       : "com.zhy:base-rvadapter:3.0.3"
     ]
 }
