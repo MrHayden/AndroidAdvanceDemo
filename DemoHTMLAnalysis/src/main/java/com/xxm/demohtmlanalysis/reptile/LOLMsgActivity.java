@@ -143,7 +143,7 @@ public class LOLMsgActivity extends BaseActivity {
                 if (pos == 1) {
                     loadUrl = DATA_URL+"/t/lol";
                 } else {
-                    loadUrl = DATA_URL + "/t/lol/index_" + pos;
+                    loadUrl = DATA_URL + "/t/lol/index_" + pos+".html";
                 }
                 Connection connection = Jsoup.connect(loadUrl);
                 try {
