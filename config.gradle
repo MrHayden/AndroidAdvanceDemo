@@ -93,6 +93,8 @@ ext {
             //万能适配器
             //RecyclerView: com.zhy:base-adapter:3.0.3   ListView: com.zhy:base-adapter:3.0.3
             "base-adapter"                         : "com.zhy:base-adapter:3.0.3",
-            "base-rvadapter"                       : "com.zhy:base-rvadapter:3.0.3"
+            "base-rvadapter"                       : "com.zhy:base-rvadapter:3.0.3",
+            //屏幕适配   https://github.com/JessYanCoding/AndroidAutoSize
+            "autosize"                             : "me.jessyan:autosize:1.1.2"
     ]
 }

@@ -1,9 +1,9 @@
-package com.xxm.demohtmlanalysis;
+package com.xxm.demohtmlanalysis.bean;
 
 /**
  * Created by Administrator on 2019/3/28 0016
  */
-public class BeanInformation {
+public class BeanChessCard {
     private String thum_url;
     private String name;
     private String content;
@@ -43,7 +43,7 @@ public class BeanInformation {
 
     @Override
     public String toString() {
-        return "BeanInformation{" +
+        return "BeanChessCard{" +
                 "thum_url='" + thum_url + '\'' +
                 ", name='" + name + '\'' +
                 ", content='" + content + '\'' +

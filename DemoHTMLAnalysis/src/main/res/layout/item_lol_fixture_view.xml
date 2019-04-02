@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/re_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical">
+
+    <com.xxm.demoglide.widget.WgShapeImageView
+        android:id="@+id/wg_img"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:scaleType="fitXY"/>
+
+
+    <com.xxm.demoglide.widget.WgShapeImageView
+        android:id="@+id/iv_state"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/tv_star_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lin_bt"
+        android:layout_alignParentRight="true"
+        android:shadowColor="#000000"
+        android:shadowDx="3"
+        android:shadowRadius="10"
+        android:textColor="#ffffff"
+        android:elevation="5dp"
+        android:shadowDy="3"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp" />
+
+    <LinearLayout
+        android:id="@+id/lin_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/wg_img"
+        android:background="#2C3040"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.xxm.demoglide.widget.WgShapeImageView
+            android:id="@+id/iv_game_icon"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:id="@+id/tv_game_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            android:layout_marginLeft="5dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

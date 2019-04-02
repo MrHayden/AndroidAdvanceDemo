@@ -68,6 +68,8 @@ dependencies {
     //滑动返回
     implementation rootProject.ext.dependencies["backLayout"]
 
+    implementation rootProject.ext.dependencies["autosize"]
+
 }
 
 // 依赖插件脚本

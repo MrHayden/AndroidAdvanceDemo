@@ -18,12 +18,6 @@ DemoAnnotations：自定义注解和动态代理，实现类似butterknife功能
 
 demoHtmlAnalysis：网上抓数据，html解析；
 
-#### 安装教程
-
-1. xxxx
-2. xxxx
-3. xxxx
-
 #### 使用说明
 
 1. xxxx
